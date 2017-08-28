@@ -3,19 +3,4 @@
 
 <router-outlet></router-outlet>
 
-<form [formGroup]="authForm">
-    <fieldset class="form-group">
-        <input formControlName="username" placeholder="Username" class="form-control form-control-lg" type="text" *ngIf="authType == 'register'" />
-    </fieldset>
-    <fieldset class="form-group">
-        <input formControlName="email" placeholder="Email" class="form-control form-control-lg" type="text" />
-    </fieldset>
-    <fieldset class="form-group">
-        <input formControlName="password" placeholder="Password" class="form-control form-control-lg" type="text" />
-    </fieldset>
-    <button class="btn btn-lg btn-primary pull-xs-right" type="submit">
-                Submit
-            </button>
-</form>
-
 <layout-footer></layout-footer>
