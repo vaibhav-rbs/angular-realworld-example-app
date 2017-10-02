@@ -4,7 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import {ListErrorsComponent} from './list-errors.component';
+import { ListErrorsComponent } from './list-errors.component';
 
 @NgModule({
   imports: [

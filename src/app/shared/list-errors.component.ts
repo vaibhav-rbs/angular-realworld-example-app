@@ -1,18 +1,26 @@
-import {Component, Input} from '@angular/core';
-import {Errors} from './models';
+import { Component, Input } from '@angular/core';
 
-export class ListErrorsComponent{
-    formattedError: Array<string> = [];
+import { Errors } from './models';
 
-    @Input()
-    set errors (errorList: Errors){
-        this.formattedError = [];
+@Component({
+  selector: 'list-errors',
+  templateUrl: './list-errors.component.html'
+})
+export class ListErrorsComponent {
+  formattedErrors: Array<string> = [];
 
-        if (errorList.errors) {
-            for (let field in errorList.errors) {
-                this.formattedError.push(`${field} ${errorList.errors[field]}`)
-            }
-        }
-    };
-    get errorList(){return this.formattedError}
+  @Input()
+  set errors(errorList: Errors) {
+    this.formattedErrors = [];
+
+    if (errorList.errors) {
+      for (let field in errorList.errors) {
+        this.formattedErrors.push(`${field} ${errorList.errors[field]}`);
+      }
+    }
+  };
+
+  get errorList() { return this.formattedErrors; }
+
+
 }
