@@ -38,15 +38,15 @@ export class AuthComponent implements OnInit {
 
     submitForm() {
         this.isSubmitting = true;
-        this.errors = new Errors()
+        this.errors = new Errors();
 
         let credentials = this.authForm.value;
         this.userService.attemptedAuth(this.authType, credentials)
         .subscribe(
             data => this.router.navigateByUrl('/'),
-            err =>{
+            err => {
                 this.errors = err;
-                this.isSubmitting = false
+                this.isSubmitting = false;
             }
         );
         console.log(credentials);

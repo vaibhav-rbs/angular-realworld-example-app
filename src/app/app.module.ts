@@ -7,11 +7,11 @@ import { AuthModule } from './auth/auth.module';
 import {HomeModule} from './home/home.module';
 
 import {
-  SharedModule,
+  ApiService,
+  UserService,
   FooterComponent,
   HeaderComponent,
-  ApiService,
-  UserService
+  SharedModule,
 } from './shared';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true })
