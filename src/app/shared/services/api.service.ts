@@ -26,7 +26,7 @@ export class ApiService {
         return Observable.throw(error.json());
     }
     post (path: string, body: Object = {}): Observable<any> {
-        return this.http.post(`${environment.api_url}${path}`, JSON.stringify(body), {headers: this.seatheaders()})
+        return this.http.post(`${environment.api_url}${path}`, JSON.stringify(body), {headers: this.setHeaders()})
         .catch(this.formatErrors)
         .map((res: Response) => res.json());
     }

@@ -9,7 +9,9 @@ import {HomeModule} from './home/home.module';
 import {
   SharedModule,
   FooterComponent,
-  HeaderComponent
+  HeaderComponent,
+  ApiService,
+  UserService
 } from './shared';
 
 const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: true })
@@ -27,7 +29,10 @@ const rootRouting: ModuleWithProviders = RouterModule.forRoot([], { useHash: tru
     HomeModule,
     rootRouting
   ],
-  providers: [],
+  providers: [
+    ApiService,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
